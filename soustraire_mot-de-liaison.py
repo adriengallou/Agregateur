@@ -12,12 +12,13 @@ article = word_tokenize(article, language='french')
 new_word = []
 
 for word in article:
-	# remove capital letters (string operation)
-	word = word.lower()
-	# Clean punctuation (string operation)
-	word = word.strip(" ;''?:,()!.\").”-«»’")
-	# add word to new word list
-	new_word.append(word)
+    if len(word) > 3:
+    	# remove capital letters (string operation)
+    	word = word.lower()
+    	# Clean punctuation (string operation)
+    	word = word.strip(" ;''?:,()!.\").”-«»’")
+    	# add word to new word list
+    	new_word.append(word)
 
 print(new_word)
 
