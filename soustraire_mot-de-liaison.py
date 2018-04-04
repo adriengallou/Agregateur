@@ -7,7 +7,20 @@ from nltk.tokenize import word_tokenize
 file = open('./article-essor.txt', 'rt')
 article = file.read()
 
-print(word_tokenize(article, language='french'))
+article = word_tokenize(article, language='french')
+
+new_word = []
+
+for word in article:
+	# remove capital letters (string operation)
+	word = word.lower()
+	# Clean punctuation (string operation)
+	word = word.strip(" ;''?:,()!.\").”-«»’")
+	# add word to new word list
+	new_word.append(word)
+
+print(new_word)
+
 
 file.close()
 #destination.close()
