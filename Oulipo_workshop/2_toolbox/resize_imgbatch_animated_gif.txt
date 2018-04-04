@@ -1,0 +1,40 @@
+
+animated gif
+_____________
+
+# all images have width of 360 and keep aspect ratio, are overwritten
+mogrify '*.JPG[360x]'
+# all images have width of 360 and keep aspect ratio, are renamed
+convert '*.jpg[200x]' resized%03d.png
+
+mogrify -resize 640x480 *.JPG
+convert -delay 140 -loop 0 *.JPG uitnodiging.gif
+convert -delay 200 0.JPG 1.JPG 2.JPG 3.JPG 4.JPG 5.JPG 6.JPG 7.JPG 8.JPG 9.JPG 10.JPG 11.JPG 12.JPG 13.JPG 14.JPG 15.JPG 16.JPG 17.JPG 18.JPG 19.JPG 21.JPG 22.JPG 23.JPG 24.JPG 25.JPG 26.JPG 27.JPG 28.JPG 29.JPG 30.JPG 31.JPG 32.JPG 33.JPG 34.JPG -loop 0 uitnodiging.gif
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 72 -tile pattern:checkerboard -size 640x480 -gravity center label:'Ssssssssssst!' label0.JPG
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 72 -tile pattern:checkerboard -size 640x480 -gravity center label:'Top Secret!' 1_label7.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 72 -tile pattern:checkerboard -size 640x480 -gravity center label:'Laatste Tuinfeest' label1.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 72 -tile pattern:checkerboard -size 640x480 -gravity center label:'Verrassing voor\n\nJuliette & Michel' 1_label8.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 72 -tile pattern:checkerboard -size 640x480 -gravity center label:'28 mei 2017\n\n15u' label1.JPG label3.JPG
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 72 -tile pattern:checkerboard -size 640x480 -gravity center label:'Houtseweg 33\n\n2340 Beerse' label4.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 42 -tile pattern:checkerboard -size 640x480 -gravity center label:'Het huis is leeg.\n\n Water en elektriciteit\n zijn afgesloten.' label5.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 42 -tile pattern:checkerboard -size 640x480 -gravity center label:'Daar hebben wij,\n de kinderen,\n oplossingen voor gevonden.' label6.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 42 -tile pattern:checkerboard -size 640x480 -gravity center label:'Wij zorgen voor\n een hapje en een drankje.' label7.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 42 -tile pattern:checkerboard -size 640x480 -gravity center label:'Brengen jullie graag mee:\n\n een klapstoel,\n een goed humeur,\n herinneringen aan het huis.' label8.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 42 -tile pattern:checkerboard -size 640x480 -gravity center label:'En potjes aarde,\n\n als je een plantje\n uit de tuin wil.' label9.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 72 -tile pattern:checkerboard -size 640x480 -gravity center label:'Graag\nbevestiging\n voor 15 mei' label10.JPG
+
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 72 -tile pattern:checkerboard -size 640x480 -gravity center label:'Hopelijk\ntot dan!' 28.JPG
+
+convert -background lime -fill green  -font AvantGarde-Book -pointsize 72 -tile pattern:checkerboard -size 640x480 -gravity center label:'Erik, Jan, \n An, Geert, \n Olivia, Giulia' label12.JPG
+
