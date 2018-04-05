@@ -16,6 +16,8 @@ from nltk import pos_tag
 file0 = open('./article-essor.txt', 'rt')
 source0 = file0.read()
 
+destination = open("./prout.txt", "w")
+
 #Coupe la source en mot et le stocke dans un tableau => article
 def tokenize_text(text):
 
@@ -48,7 +50,18 @@ def extract(texte, tag):
     liste = []
     for word, pos in out2:
         if pos == tag:
-            liste.append("'" + word + "' "+tag)
+            liste.append(word)
+    with destination as text:
+        text.write(" ".join(liste))
+
+    '''
+
+        liste.append('[')
+        liste.reverse()
+        liste.append(']')
+
+    '''
+
     return liste
 
 
@@ -57,7 +70,7 @@ def extract(texte, tag):
 article = tokenize_text(source0)
 out = clean_text(article)
 out2 = clean_stop(out)
-out3 = extract(out2, "NN")
+out3 = extract(out2, "NNS")
 #Affiche le résultat
 print(out3)
 
